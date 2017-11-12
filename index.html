@@ -1,0 +1,27 @@
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="style.css" rel="stylesheet">
+	<script src="data.js"></script>
+	<title>식당뽑기</title>
+	<body>
+		<h1>지금 뭐 먹지?</h1>
+		<p id="what_to_eat"></p>
+		<p id="btn" onclick="location.reload();">다시 선택</p>
+		<script>
+			var prob_sum = prob.reduce(function(a, b) { return a + b; }, 0);
+			var selected = Math.floor(Math.random()*prob_sum);
+			var prob_init = 0;
+			var i = 0;
+			for (i = 0; i < food.length; i++) {
+				console.log(prob_init);
+				if (selected < prob_init+prob[i]) break;
+				else prob_init += prob[i];
+			}
+			document.getElementById("what_to_eat").innerHTML = food[i]; 
+		</script>
+	</body>
+
+</html>

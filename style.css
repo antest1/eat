@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    background-color: #FFF8C6;
+    color: #493D26;
+    user-select: none
+}
+
+h1 {
+	margin: 1em; 
+}
+
+#btn {
+    display: inline-block;
+    background-color: #493D26;
+    color: #FFF8C6;
+    font-size: 2em;
+    margin: 0 auto;
+	margin-top: 1em;
+    padding: 10px
+}
+
+#what_to_eat {
+    border: 8px double #493D26;
+    width: 35%;
+    margin: 0 auto;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 4.5em
+}
